@@ -15,6 +15,8 @@ You will need to store the credential of the user that will be used to resumes o
 
 You can also create a group in the Vault with these users in it and assign that one group the same permissions to the safe.
 
+It's also assumed that your REST API is working in general.
+
 ## Edit the Script
 Once you have the script on your system you will need to edit a few variables so it will run.
 - **$baseURL**, URL or IP address for your environment.
