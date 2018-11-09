@@ -89,6 +89,7 @@ $resume = EPV-ActivateUser $userToResume
 
 If ($resume.Suspended -eq $false) {
 	Write-Host "$userToResume was successfully resumed!" -ForegroundColor Green
+	EPV-Logoff
 }
 
 ########################### END SCRIPT ###################################################
