@@ -32,3 +32,4 @@ You will be promted for input...
 
 ## Things to do
 - [ ] Allow script to take user to resume as arugment.
+- [ ] Add more complete error handling.
