@@ -24,10 +24,10 @@
 ######################### GLOBAL VARIABLE DECLARATIONS ###################################
 
 $baseURI = "https://components.cyberarkdemo.com"		# URL or IP address for your environment
-$appID = "UnlockUser"									# AppID created for resmuming users
-$safe = "Unlock Users"									# Name of the safe that contains the CyberArk credential to resume the users
-$folder = "root"										# Folder the credential is stored in (Usally this is root)
-$object = "UserUnlock"									# The Object that corresponds to the credential in the Vault
+$appID = "UnlockUser"						# AppID created for resmuming users
+$safe = "Unlock Users"						# Name of the safe that contains the CyberArk credential to resume the users
+$folder = "root"						# Folder the credential is stored in (Usally this is root)
+$object = "UserUnlock"						# The Object that corresponds to the credential in the Vault
 
 ########################## START FUNCTIONS ###############################################
 
