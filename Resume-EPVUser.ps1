@@ -78,7 +78,9 @@ Write-Host "Retreiving the credential to resume $userToResume..." -NoNewLine
 $cred = EPV-GetUnlockUserPW
 Write-Host "Success!"
 
-Write-Host "Logging into EPV as $cred.UserName..." -NoNewLine
+$user = $cred.UserName
+
+Write-Host "Logging into EPV as $user..." -NoNewLine
 $login = EPV-Login $cred.UserName $cred.Content
 $header = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $header.Add("Authorization", $login.CyberArkLogonResult)
