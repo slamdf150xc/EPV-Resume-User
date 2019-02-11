@@ -28,8 +28,9 @@ Once you have the script on your system you will need to edit a few variables so
 ## Running the script
 ```
 .\Unlock-EPVUser.ps1
+.\Unlock-EPVUser.ps1 -UserToResume John
 ```
-You will be promted for input...
+You will be promted for input if you do not provide the username...
 > What is the name of the user that needs to be resumed in EPV:
 
 ## Things to do
