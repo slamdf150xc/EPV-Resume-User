@@ -33,6 +33,6 @@ You will be promted for input...
 > What is the name of the user that needs to be resumed in EPV:
 
 ## Things to do
-- [ ] Allow script to take user to resume as arugment.
+- [x] Allow script to take user to resume as arugment.
 - [ ] Add more complete error handling.
 - [ ] Add error handling.
