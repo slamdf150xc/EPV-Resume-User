@@ -5,9 +5,10 @@
 
 .EXAMPLE
 	./Resume-EPVUser.ps1
+	./Resume-EPVUser.ps1 -UserToResume John
 
 .INPUTS
-	None via command line
+	UserToResume - The ID of the user that is suspended and needs resumed
 
 .OUTPUTS
 	None
@@ -18,9 +19,13 @@
 
 	VERSION HISTORY:
 	1.0 10/05/2018 - Initial release
+	1.1 02/11/2019 - Added manditory parameter to input user to be unlocked at run time
 #>
-##########################################################################################
-
+######################### Parameters ####################################################
+Param (
+	[Parameter(Mandatory = $true)]
+	[string] $UserToResume
+)
 ######################### GLOBAL VARIABLE DECLARATIONS ###################################
 
 $baseURI = "https://components.cyberarkdemo.com"		# URL or IP address for your environment
@@ -72,8 +77,6 @@ Function EPV-ActivateUser($userID) {
 
 ########################## MAIN SCRIPT BLOCK #############################################
 
-$userToResume = Read-Host "What is the name of the user that needs to be resumed in EPV"
-
 Write-Host "Retreiving the credential to resume $userToResume..." -NoNewLine
 $cred = EPV-GetUnlockUserPW
 Write-Host "Success!"
@@ -92,7 +95,7 @@ $resume = EPV-ActivateUser $userToResume
 If ($resume.Suspended -eq $false) {
 	Write-Host "$userToResume was successfully resumed!" -ForegroundColor Green
 } Else {
-	Write-Host "$userToResue was not successfully resumed." -ForegroundColor Red
+	Write-Host "$userToResume was not successfully resumed." -ForegroundColor Red
 }
 
 EPV-Logoff
