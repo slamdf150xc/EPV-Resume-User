@@ -36,4 +36,3 @@ You will be promted for input if you do not provide the username...
 ## Things to do
 - [x] Allow script to take user to resume as arugment.
 - [ ] Add more complete error handling.
-- [ ] Add error handling.
