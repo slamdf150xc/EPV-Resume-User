@@ -32,7 +32,3 @@ Once you have the script on your system you will need to edit a few variables so
 ```
 You will be promted for input if you do not provide the username...
 > What is the name of the user that needs to be resumed in EPV:
-
-## Things to do
-- [x] Allow script to take user to resume as arugment.
-- [ ] Add more complete error handling.
